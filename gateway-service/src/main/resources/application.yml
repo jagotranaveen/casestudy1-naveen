@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: theater-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/theater/**
+        - id: booking-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/booking/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

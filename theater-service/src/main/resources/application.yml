@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: theater-service
+  datasource:
+    url: jdbc:postgresql://onlinebookingdb.postgres.database.azure.com:5432/theaterdb
+    username: azure_pd_admin
+    password: K@@p1TSecret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    com.casestudy1.naveen.theater: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# Additional configuration (if needed) for swagger and opentelemetry

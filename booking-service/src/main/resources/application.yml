@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: booking-service
+  datasource:
+    url: jdbc:postgresql://onlinebookingdb.postgres.database.azure.com:5432/bookingdb
+    username: azure_pd_admin
+    password: K@@p1TSecret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    com.casestudy1.naveen.booking: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# Additional configuration (if needed) for swagger and opentelemetry
