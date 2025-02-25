@@ -1,0 +1,20 @@
+# Maven
+/target/
+**/target/
+
+# IDEs
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
